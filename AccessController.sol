@@ -44,7 +44,7 @@ contract AccessController {
 
     // Sadece belirli role sahip adreslerin kullanabilecegi metodlar yapmak icin olusturulan modifier
     modifier onlyRole(bytes32 role){
-        require (roles[role][msg.sender],"not authrized");
+        require (roles[role][msg.sender],"not authorized");
         _;
         }
 
